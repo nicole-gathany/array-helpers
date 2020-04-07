@@ -8,6 +8,9 @@ function checkArray(arr) {
 
 let arrProto = Array.prototype;
 
+arrProto.isEmpty = function() {
+  return this.length === 0;
+};
 arrProto.square = function() {
   if (this.length > 0) {
     return this.map(a => Math.pow(a, 2));
